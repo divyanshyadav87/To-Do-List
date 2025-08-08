@@ -31,13 +31,13 @@ const page = () => {
   }
 
 
-  let renderTask = <h2 className='text-xl font-semibold backdrop-blur-md p-10 w-255 rounded-2xl border-2'>No Task Available</h2>
+  let renderTask = <h2 className='task text-xl font-semibold backdrop-blur-md p-10 w-255 rounded-2xl border-2'>No Task Available</h2>
 
   if (tasks.length > 0) {
      renderTask = tasks.map((t, i) => {
     
     return (
-    <li key={i} className='list flex justify-between text-white items-center flex-col p-5 m-5 rounded-xl w-100 h-50 border-2 border-black'>
+    <li key={i} className='tasks list flex justify-between text-white items-center flex-col p-5 m-5 rounded-xl w-100 h-50 border-2 border-black'>
       <h5 className='text-3xl font-semibold'>{t.title}</h5>
       <p className='text-md font-light'>{t.description}</p>
 
