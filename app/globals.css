@@ -1,26 +1,84 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+    ::selection {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+    overscroll-behavior: none;
+    /* overflow-x: hidden; */
+    touch-action: manipulation;
+}
+body{
+    /* background-color: rgb(118, 117, 117); */
+    background-image: url('https://i.pinimg.com/1200x/c7/36/f8/c736f83436d84ddc039fe42de40c8ec7.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.list{
+    background-color: rgba(0, 0, 0, 0.158);
+    backdrop-filter: blur(10px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@media screen and (max-width: 640px) {
+    body{
+        background-image: url('https://i.pinimg.com/1200x/c7/36/f8/c736f83436d84ddc039fe42de40c8ec7.jpg');
+        /* background-image: url('https://i.pinimg.com/564x/3c/0f/1e/3c0f1e2b4d8a5b6d7a9f5b2c6d8e4b7c.jpg'); */
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        background-attachment: fixed;
+    }
+
+    h1{
+        font-size: 2rem;
+        width: 60vw;
+        margin-left: 20vw;
+    }
+    
+    h2{
+        width: 80vw;
+    }
+    form{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+        margin-left: 10vw;
+    }
+    .title, .desc{
+        width: 80vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .desc{
+        height: 10vh;
+    }
+    .task{
+        width: 80vw;
+        margin-left: -47vw;
+        color: rgba(255, 255, 255, 0.655);
+        font-weight: 400;
+
+        border: 2px solid black;
+    }
+    .tasks{
+        width: 80vw;
+        margin-left: -47vw;
+        color: rgba(255, 255, 255, 0.655);
+        font-weight: 400;
+        border: 2px solid black;
+    }
+    ul{
+        display: flex ;
+        flex-direction: column;
+        /* align-items: center;
+        justify-content: center; */
+    }
 }
